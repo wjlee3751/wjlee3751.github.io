@@ -1,0 +1,35 @@
+div{
+
+    
+    margin: 10px;
+}
+.main{
+    border: black 4px solid;
+    max-width: 1200px;
+    margin:auto
+}
+
+
+.total{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.innhold{
+    
+    
+}
+
+
+.footer{
+    word-spacing: 10px;
+    text-align: center;
+}  
+h2{text-align: left;}
+
+.hr{
+    border: 0;
+    height: 4px;
+    background-color: black;
+}

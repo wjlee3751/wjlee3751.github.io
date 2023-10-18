@@ -1,0 +1,27 @@
+div{
+
+    
+    margin: 10px;
+}
+.hr{
+    border: 0;
+    height: 4px;
+    background-color: black;
+    
+}
+.main{
+    border: black 4px solid;
+    max-width: 1200px;
+    margin:auto
+}
+.tittel{
+    text-align: center;
+    
+}
+
+.footer{
+    
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

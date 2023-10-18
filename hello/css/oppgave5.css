@@ -1,0 +1,44 @@
+div{
+
+    
+    margin: 10px;
+}
+.main{
+    border: black 4px solid;
+    max-width: 1200px;
+    margin:auto
+}
+.email{
+    text-align: right;
+}
+
+img{
+    /*height: auto;*/
+    max-width: 100%;
+} 
+
+.total{
+    display: flex;
+    min-height: 300px;
+    margin: 10px;
+    justify-content: center;
+    
+
+}
+.innhold{
+    
+    
+}
+
+
+.footer{
+    text-align: center;
+}  
+h2{text-align: left;}
+
+.hr{
+    border: 0;
+    height: 4px;
+    background-color: black;
+}
+

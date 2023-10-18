@@ -1,0 +1,44 @@
+div{
+
+    margin: 10px;
+}
+.main{
+    
+    border: black 4px solid;
+    max-width: 1200px;
+    margin:auto
+}
+.tittel{
+    
+}
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    text-decoration: none;
+    font-size: 150%;
+   
+    font-weight: bold;
+}
+
+.nav{
+    
+    color: black
+}
+
+.footer{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.hr{
+    border: 0;
+    height: 4px;
+    background-color: black;
+}
