@@ -1,0 +1,71 @@
+
+
+div{
+    margin: 10px;
+}
+.main{
+    background-color: bisque;
+    max-width: 1200px;
+    margin:auto
+    
+}
+
+
+.nav li{
+    display: inline;
+    
+}
+
+.nav a{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+    text-decoration: none;
+    font-size: 150%;
+    color: black;
+   
+    font-weight: bold;
+    border-radius: 30px;
+}
+.nav a:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: black;
+
+
+
+}
+
+.nav{
+    background-color: chocolate;
+    border-radius: 30px;
+}
+
+.footer{
+    background-color: burlywood;
+    text-align: center;
+    padding-top: 60px;
+    
+}
+
+.button{
+    position: absolute;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.button :hover{
+    text-decoration: underline;
+    background-color: white;
+    color: black;
+
+
+
+}
