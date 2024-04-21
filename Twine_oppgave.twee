@@ -1,0 +1,347 @@
+:: StoryTitle
+index
+
+
+:: StoryData
+{
+  "ifid": "2CD430E9-8CF0-49C9-944B-60A6A2324979",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Untitled Passage 1",
+  "zoom": 0.6
+}
+
+
+:: A photo in a frame {"position":"2525,1075","size":"100,100"}
+In the picture was me and Owen David.
+It was a photo taken before boarding the ship that sank three years ago.
+
+[[go back->basement]]
+
+
+:: Check the paper {"position":"2350,925","size":"100,100"}
+The paper was his report. It had information about him written on it.
+
+name: Owen Harlow
+gender: M
+birth date: 2304.1994
+
+[[go back->basement]]
+
+
+:: David {"position":"1425,725","size":"100,100"}
+
+
+(if: $key1 is true)
+[
+
+As I approached David, Owen's expression did not look good.
+
+[[show David the key->David med nøkkel]]
+[[Hide the key->uten nøkkel]]
+]
+ (else:)
+ [
+He looked calmer than I thought. Yes, he has always been a very calm person.
+I think that's why he survived along with me and Owen when the ship sank three years ago.
+ 
+
+[[listen to his opinion->David mening]]
+]
+
+
+:: David med nøkkel {"position":"1375,900","size":"100,100"}
+He said it was the basement key. Additionally, he claimed that he was suspicious of Owen being so anxious. I stared at Owen. He was glaring at us. I ignored Owen, who was glaring at us, and went down to the basement.
+
+(set: $David to true)
+[[go down to the basement->basement entrance]]
+
+
+
+:: David mening {"position":"1275,475","size":"100,100"}
+He said with a calm expression that he did not doubt me. However, he said that he had not seen Owen until a moment ago and that he was suspicious of him.
+
+[[go back to living room->next]]
+
+
+
+
+:: Owen {"position":"1750,650","size":"100,100"}
+
+
+(if: $key1 is true)
+
+
+[
+As I approached Owen, David's expression did not look good.
+
+
+[[show Owen the key->Owen med nøkkel]]
+[[Hide the key->uten nøkkel]]
+]
+ (else:)
+ 
+ [
+ Owen looked very anxious. He was the one who escaped with David and I during the sinking incident three years ago. After that incident, he suffered from a disease that caused him to frequently feel anxious.
+ 
+
+[[listen to his opinion->Owen mening]]
+]
+
+
+:: Owen med nøkkel {"position":"1800,875","size":"100,100"}
+When I showed him the keys, he stared at David and then back at the keys. He said David had a similar key before Oliver died. And he said it was the key to the basement.
+
+(set: $Owen to true)
+[[go down to the basement->basement entrance]]
+
+
+
+:: Owen mening {"position":"1975,550","size":"100,100"}
+
+
+
+He claimed he had no reason to kill Oliver.
+And he suggested that the dead body be examined.
+
+[[examine the body->dead Oliver]] 
+[[go back to living room->next]]
+
+
+
+
+
+:: Untitled Passage 1 {"position":"1575,75","size":"100,100"}
+In The Cabin
+
+
+[[forsett->story]]
+
+
+
+
+:: a drawer {"position":"2375,1075","size":"100,100"}
+I opened an old drawer and found a piece of paper there.
+
+[[Check the paper]]
+[[ignore the paper->basement]]
+
+
+:: an old bag {"position":"2825,1075","size":"100,100"}
+The bag was locked with an iron lock. It was probably Oliver's bag. 
+
+Then I suddenly remembered that he sets his 4-digit birth month and day as his password.
+
+
+(set: $answer to (prompt: "what is the code?",""))
+(if: $answer is "2304") [that is correct
+[[   open the bag->correct]]]
+(else:) [it is wrong  
+[[go back->basement]] ]
+
+
+
+
+
+
+
+:: basement {"position":"2600,800","size":"100,100"}
+I found out that this place smells bloody.
+However, the key was found in the dead Oliver's pocket. Something was strange.
+
+Probably the starting point of all questions, the basement
+I started examining the items here.
+
+
+[[bookshelf]]
+[[a drawer]]
+[[an old bag]]
+[[A photo in a frame]]
+
+
+
+:: basement entrance {"position":"1575,1100","size":"100,100"}
+There were many questions. Why is the basement locked?
+Why did Oliver have the key?
+Could someone be hiding something in the basement?
+
+I stood in front of the basement door and had to make a decision.
+
+[[Go in and investigate->basement]]
+
+[[back to living room->nothing]]
+
+
+
+
+
+
+
+:: bookshelf {"position":"2675,1075","size":"100,100"}
+There were many books related to mental health on the bookshelf.
+Regarding schizophrenia, hallucinations and auditory hallucinations...
+
+[[go back->basement]]
+
+
+:: correct {"position":"2825,1225","size":"100,100"}
+(set: $blod to true)
+
+A bloody baseball bat was found in the bag.
+
+The blood was still wet and I knew it was fresh blood.
+
+
+
+
+
+[[back to the living room ->get together]]
+
+
+:: dead Oliver {"position":"1925,375","size":"100,100"}
+first, I closed Oliver's dead eyes.
+
+Three years ago there was a famous ship sinking incident and I was one of only 20% of the survivors.
+And the friend who helped me overcome that trauma was Oliver. He majored in psychology and gave me free weekly counseling.
+
+
+
+I checked his pocket and found a key.
+
+
+(set: $key1 to true )
+
+[[go back to living room->with key]]
+
+
+:: ending {"position":"1550,1825","size":"100,100"}
+
+
+<a href="https://www.helsenorge.no/sykdom/psykiske-lidelser/schizofreni/" target="_blank">Lære mer </a>
+
+
+
+
+:: get together {"position":"1575,1350","size":"100,100"}
+(if: $Owen is true)
+[
+When I go back to the living room, David started getting angry at me, asking me why I didn't show him the keys. I could sense that Owen and David were unable to bear the anxiety and were becoming emotionally emotionally charged. Then he asked me about what I found in the basement.
+]
+
+(if: $David is true)
+[
+When I go back to the living room, Owen started getting angry at me, asking me why I didn't show him the keys. I could sense that Owen and David were unable to bear the anxiety and were becoming emotionally emotionally charged. Then he asked me about what I found in the basement.
+]
+
+(else: )
+[
+When I returned to the living room I found Owen and David fighting. Perhaps they seemed extremely suspicious of each other.
+]
+
+[[Show them the bloody baseball bat I found->way_1]]
+[[Lied that I didn't find anything.->way_2]]
+
+
+:: medicine {"position":"1550,1625","size":"100,100"}
+About 30 minutes after taking the medicine, pieces of my memories began to return one by one.
+
+I survived a sinking ship three years ago and suffered severe trauma.
+Then I met a psychologist, Oliver, and received weekly counseling from him and was prescribed medication.
+
+The medicine he gave me saved me from the illusion of David and Owen.
+I suffered from guilt for not being able to come out with them three years ago, and Oliver treated me with care.
+
+[[continue->ending]]
+
+
+:: next {"position":"1575,400","size":"100,100"}
+It was raining hard outside and we had lost contact. All we can do was watch out for each other.
+We stood in the living room wary of each other, unable to accept that someone had committed murder.
+
+And I decided I had to do something.
+
+[[Talk to David->David]]
+[[Talk to Owen->Owen]]
+[[Check on Oliver who is dead.->dead Oliver]]
+
+
+:: nothing {"position":"1850,1125","size":"100,100"}
+When I returned from the basement alone, I found David and Owen talking to each other. They looked at me warily. And they started to get suspicious of me when I came up from the basement without getting anything. I didn't kill Oliver. But I had no evidence to prove it.
+
+In the end, I was convinced that the basement was where I would find the definitive clues that would prove my innocence.
+
+
+[[Go to the basement->basement]]
+
+
+
+:: story {"position":"1575,250","size":"100,100"}
+Oliver died tonight. I, Oliver Owen, and David arrived at this cabin 6 hours ago, and Oliver, who had been hit on the head and killed, was found by David 20 minutes ago.
+
+We have been friends for a long time and trusted each other. But when Oliver died in this house with only the four of us, our relationship began to crack.
+
+I couldn't believe anyone. Probably the same goes for David and Owen.
+
+
+[[next]]
+
+
+:: uten nøkkel {"position":"1575,875","size":"100,100"}
+I hid the fact that I had found the key. The possibility that he may have committed murder could not be ruled out.
+
+I went up to the second floor, observed the key by myself, and found that it had “basement” written in small letters on it.
+
+
+(set: $alone to true)
+
+[[Go to the basement->basement entrance]]
+
+
+
+:: way_1 {"position":"1425,1475","size":"100,100"}
+When I showed them the bloody bat, they were horrified and said, “That bloody bat is your bat.”
+
+I couldn't understand anything. Perhaps no understandable situation has occurred since Oliver died.
+
+(if: $real is true)
+[
+[[Go to the bathroom and take the medicine->medicine]]
+]
+(else:)
+[
+I wanted to claim my innocence to them, but I had no such proof. Because Oliver was killed by my bat.
+
+Then suddenly I remembered that day three years ago.
+The day we escaped from the sinking ship.
+Or the day I escaped alone
+I remembered what Oliver always said to me in the past.
+“When you suffer from hallucinations, don’t hesitate to take the medicine in the red bottle in the bathroom.”
+
+[[Go to the bathroom and take the medicine->medicine]]
+]
+
+
+:: way_2 {"position":"1700,1475","size":"100,100"}
+(set: $real to true)
+When I told them I couldn't find anything, 
+and Owen said
+“I know you’re lying, you murderer.”
+David told me. 
+“You committed murder three years ago and you are still committing murder.”
+
+I didn't commit murder 3 years ago, I couldn't understand what they were saying.
+
+And every time I do this, I remember what Oliver always told me.
+“Go to the bathroom and take the medicine in the red bottle.”
+
+[[go to the bathroom and take medicine->medicine]]
+[[Even now, show the bloody baseball bat and claim your innocence.->way_1]]
+
+
+
+
+:: with key {"position":"1575,600","size":"100,100"}
+I returned to the living room with the key and went to
+
+[[David]]
+[[Owen]]
